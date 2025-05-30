@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-black text-white font-sans overflow-x-hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-heading;
+}
+
+.section-container {
+  @apply max-w-6xl mx-auto px-4 md:px-8;
+}
+
+.section-title {
+  @apply text-2xl md:text-3xl font-bold uppercase tracking-wider mb-12 relative text-white;
+}
+
+.section-title::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-12 h-px bg-white mt-2;
+}
+
+/* Custom gradient backgrounds */
+.gradient-dark {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+}
+
+.gradient-subtle {
+  background: linear-gradient(170deg, rgba(26,26,26,0.8) 0%, rgba(0,0,0,0.9) 100%);
+}
+
+/* Project card styles */
+.project-card {
+  @apply relative overflow-hidden transition-all duration-500 transform hover:scale-105;
+  background: linear-gradient(170deg, #1a1a1a 0%, #000000 100%);
+}
+
+.project-card:hover {
+  box-shadow: 0 0 30px rgba(255,255,255,0.1);
+}
+
+/* Image hover effects */
+.image-hover {
+  @apply transform transition-transform duration-500;
+}
+
+.image-hover:hover {
+  transform: scale(1.05);
+}
+
+/* Button styles */
+.button-primary {
+  @apply bg-white text-black px-6 py-3 rounded-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  background: linear-gradient(to right, #ffffff, #e6e6e6);
+}
+
+/* Section backgrounds */
+.section-gradient {
+  background: linear-gradient(170deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-800 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-700;
+}
+
+/* Smooth transitions */
+* {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Modal styles */
+.modal-backdrop {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+.modal-content {
+  background: linear-gradient(170deg, #1a1a1a 0%, #000000 100%);
+}
